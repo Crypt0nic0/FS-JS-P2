@@ -58,7 +58,7 @@ response.addEventListener('mouseover', () => {
 });
 
 
-//------------------------------------------------------------
+//-----------------------------------------------------------
 //======================KEY PRESS============================
 const keypressContainer = document.querySelector('.keypress');
 const key = document.getElementById("key");
@@ -76,3 +76,16 @@ const ring = () =>{
     audio.src = "./Enter.mp3";
     audio.play();
 };
+
+
+
+//-----------------------------------------------------------
+//======================SCROLL EVENT=========================
+const nav = document.querySelector("nav");
+window.addEventListener('scroll', () => {
+    if(window.scrollY > 120){
+        nav.style.top = 0;
+    } else {
+        nav.style.top = "-50px";
+    }
+});
