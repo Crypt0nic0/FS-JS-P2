@@ -4,7 +4,7 @@
 
 
 
-
+//------------------------------------------------------------
 //======================CLICK EVENT===========================
 const questionContainer = document.querySelector('.click-event');
 const btn1 = document.querySelector('#btn-1');
@@ -28,5 +28,31 @@ btn2.addEventListener('click', () => {
 
 
 
-
+//------------------------------------------------------------
 //======================MOUSE EVENT===========================
+const mousemove = document.querySelector('.mousemove');
+
+window.addEventListener('mousemove', (e) => {
+    mousemove.style.top = e.pageY + "px";
+    mousemove.style.left = e.pageX + "px";
+});
+
+window.addEventListener("mousedown", () => {
+    mousemove.style.transform = "scale(2) translate(-25%, -25%)";
+});
+
+window.addEventListener("mouseup", () => {
+    mousemove.style.transform = "scale(1) translate(-50%, -50%)";
+});
+
+questionContainer.addEventListener('mouseenter', () => {
+    questionContainer.style.border = "3px solid red";
+});
+
+questionContainer.addEventListener('mouseout', () => {
+    questionContainer.style.border = "3px solid black";
+});
+
+response.addEventListener('mouseover', () => {
+    response.style.transform = "rotate(2deg)";
+});
