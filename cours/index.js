@@ -135,7 +135,7 @@ window.addEventListener("load", () => {
 
 
 //-----------------------------------------------------------
-//================================================
+//=========================FOREACH===========================
 const boxes = document.querySelectorAll(".box");
 
 boxes.forEach((box) => {
@@ -143,3 +143,24 @@ boxes.forEach((box) => {
         console.log(e.target);
     });
 });
+
+
+
+
+
+
+//-----------------------------------------------------------
+//==============addEventListener vs onclick==================
+document.body.onclick = function () {
+    console.log("Click !");
+}
+
+// Bubbling => fin (de base l'eventListener est en mode Bubbling)
+document.body.addEventListener("click", () => {
+    console.log("Click 1");
+});
+
+// Usecapture
+document.body.addEventListener("click", () => {
+    console.log("Click 2");
+},true);
