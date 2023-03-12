@@ -164,3 +164,14 @@ document.body.addEventListener("click", () => {
 document.body.addEventListener("click", () => {
     console.log("Click 2");
 },true);
+
+
+
+
+
+//-----------------------------------------------------------
+//=================== STOP PROPAGATION=======================
+questionContainer.addEventListener('click', (e) => {
+    alert("Test !");
+    e.stopPropagation();
+});
