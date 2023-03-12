@@ -122,3 +122,15 @@ form.addEventListener('submit', (e) => {
         alert("Veuillez accepter les CGV");
     }
 });
+
+
+
+
+
+//-----------------------------------------------------------
+//======================LOAD EVENTS==========================
+window.addEventListener("load", () => {
+    console.log("Document Chargé !");
+});
+
+
